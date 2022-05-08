@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<meta charset="UTF-8">
+{% set num = members_list["members"]|random %}
+<h2 align="center">{{ num.name }} {{ num.surname }}</h2>
+<p align="center"><img src="{{ num.photo}}"></p>
+
+<p align="center">{{num.prof|sort|join(', ')}}</p>
+{% endblock %}
